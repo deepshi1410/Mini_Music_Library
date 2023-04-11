@@ -1,17 +1,17 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png" />
+  <div id="app" class="container">
     <router-view />
   </div>
 </template>
-
+/* eslint-disable */
 <script>
 export default {
-  name: "App",
-};
+  name: 'App'
+}
 </script>
 
 <style>
-#app {
+table td {
+  word-break: break-word;
 }
 </style>

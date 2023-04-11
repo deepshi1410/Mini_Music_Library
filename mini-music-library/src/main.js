@@ -3,12 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import 'bulma/css/bulmac.css'
+import 'bulma/css/bulma.css'
 import FontAwesome from '@fortawesome/fontawesome'
-import VueFontAwesome from '@fortawesome/vue-fontawesome'
 import FontAwesomeSolid from '@fortawesome/fontawesome-free-solid'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
 FontAwesome.library.add(FontAwesomeSolid)
-Vue.component('fa-icon', VueFontAwesome)
+Vue.component('fa-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
 
