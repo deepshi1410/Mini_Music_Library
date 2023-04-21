@@ -5,7 +5,7 @@ and re-rendering it once data is changed is not at all good for website performa
   <table
     class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
   >
-  <sorted :songs="songs" @sortedSongs="sort_songs"></sorted>
+  <sorted :songs="songs" @sortedSongs="sort_songs" />
   <paginated :records="sortedList" />
   </table>
 </template>

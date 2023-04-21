@@ -1,7 +1,4 @@
 <template>
-  <table
-    class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
-  >
     <thead>
       <th style="30%"><a @click="change_sort('name')">Name
         <fa-icon icon="chevron-up" v-if="sortBy == 'name' && sortDirection == 'asc'" />
@@ -16,17 +13,10 @@
         <fa-icon icon="chevron-up" v-if="sortBy == 'release_date' && sortDirection == 'asc'" />
         <fa-icon icon="chevron-down" v-if="sortBy == 'release_date' && sortDirection == 'desc'" /></a></th>
     </thead>
-  <paginated :records="sortedList" />
-  </table>
 </template>
 
 <script>
-import MusicData from '@/assets/list.json'
-import PaginatedTableData from '@/components/PaginatedTableData.vue'
 export default {
-  components: {
-    'paginated': PaginatedTableData
-  },
   props: {
     songs: {
       type: Array,
@@ -35,7 +25,6 @@ export default {
   },
   data () {
     return {
-      songs: MusicData,
       sortBy: '',
       sortDirection: 'asc'
     }
